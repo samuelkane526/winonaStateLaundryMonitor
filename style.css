@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(174, 205, 225, 0.9), transparent);
+}
+
+.machinesCon {
+    position: absolute;
+    top: 15%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    height: 20%;
+}
+
+.machine-box {
+    width: 125px;
+    height: 125px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.machine-type {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #000;
+    margin: 10px 0;
+}
+
+.machine-time {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.status {
+    margin-top: 17px;
+}
+
+.theme-checkbox {
+    --toggle-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 6.25em;
+    height: 3.125em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #aecde1 50%, #fdf5c4 50%) no-repeat;
+    background: linear-gradient(to right, #aecde1 50%, #fdf5c4 50%) no-repeat;
+    background-size: 205%;
+    background-position: 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 99em;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--toggle-size);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-checkbox::before {
+    content: "\f773";
+    /* Font Awesome sun icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    top: 0.438em;
+    left: 0.438em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #fdfdfd 50%, #fdfdfd 50%) no-repeat;
+    background: linear-gradient(to right, #fdfdfd 50%, #fdfdfd 50%) no-repeat;
+    background-size: 205%;
+    background-position: 100%;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+    content: "\f06d";
+    /* Font Awesome moon icon */
+    left: calc(100% - 2.25em - 0.438em);
+    background-position: 0;
+}
+
+.theme-checkbox:checked {
+    background-position: 100%;
+}
+
+.github-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.github-link:hover {
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 1200px) and (min-width: 801px) {
+    .machinesCon {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .machinesCon {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
