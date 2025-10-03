@@ -51,5 +51,3 @@ by using a barcode scanning app on the machine tags._
 - A local server to handle CORS and proxy requests
 
 ---
-
-Would you like me to generate this as a downloadable `README.md` file for you?
